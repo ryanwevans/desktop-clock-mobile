@@ -1,0 +1,11 @@
+{
+  "name": "Desktop Clock",
+  "short_name": "Clock",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "description": "Desktop clock and calendar display",
+  "orientation": "any",
+  "prefer_related_applications": false
+}
