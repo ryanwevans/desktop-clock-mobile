@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'theme/app_colors.dart';
 import 'widgets/clock_section.dart';
@@ -29,7 +30,13 @@ class DesktopClockApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         scaffoldBackgroundColor: AppColors.background,
-        fontFamily: 'Helvetica Neue',
+        fontFamily: GoogleFonts.roboto().fontFamily,
+        textTheme: GoogleFonts.robotoTextTheme(
+          ThemeData(brightness: Brightness.dark).textTheme,
+        ).apply(
+          bodyColor: AppColors.calendarDay,
+          displayColor: AppColors.calendarDay,
+        ),
       ),
       home: const ClockCalendarScreen(),
     );

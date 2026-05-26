@@ -42,10 +42,10 @@ class MonthCalendar extends StatelessWidget {
             children: [
               Text(
                 '${_monthNames[now.month - 1]} ${now.day}, ${now.year}',
-                style: TextStyle(
+                style: AppTextStyles.robotoThin(
+                  fontSize: (daySize * 0.35).clamp(10, 14) + 1,
                   color: AppColors.monthLabel,
-                  fontSize: (daySize * 0.35).clamp(10, 14),
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
               SizedBox(height: daySize * 0.5),
@@ -73,7 +73,6 @@ class MonthCalendar extends StatelessWidget {
                           (daySize * 0.42).clamp(12, 22),
                         ).copyWith(
                           color: isToday ? AppColors.today : AppColors.calendarDay,
-                          fontWeight: isToday ? FontWeight.w500 : FontWeight.w300,
                         ),
                       ),
                     );

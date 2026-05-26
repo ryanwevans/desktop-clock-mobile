@@ -16,7 +16,6 @@ class _DigitalClockState extends State<DigitalClock>
   late final Ticker _ticker;
 
   static const _referenceFontSize = 240.0;
-  static const _lineHeight = 0.78;
   static const _colonGap = _referenceFontSize * 0.055;
 
   @override
@@ -47,10 +46,8 @@ class _DigitalClockState extends State<DigitalClock>
           letterSpacing: 0,
           height: 1.0,
         );
-        const strutStyle = StrutStyle(
-          fontSize: _referenceFontSize,
-          height: _lineHeight,
-          fontWeight: FontWeight.w100,
+        final strutStyle = StrutStyle.fromTextStyle(
+          AppTextStyles.digitalClockTime(_referenceFontSize),
           forceStrutHeight: true,
         );
 

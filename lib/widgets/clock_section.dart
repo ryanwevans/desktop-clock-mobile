@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../theme/app_colors.dart';
+import '../theme/app_text_styles.dart';
 import 'clock_face.dart';
 import 'digital_clock.dart';
 
@@ -54,10 +55,9 @@ class _StyleToggleButton extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
           child: Text(
             label,
-            style: const TextStyle(
-              color: AppColors.monthLabel,
+            style: AppTextStyles.robotoThin(
               fontSize: 13,
-              fontWeight: FontWeight.w300,
+              color: AppColors.monthLabel,
               letterSpacing: 0.08,
             ),
           ),
